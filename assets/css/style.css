@@ -88,21 +88,39 @@ form input {
   outline: 1px solid #333;
 }
 
-form input:first-child {
+form input:first-child,
+form input:nth-child(2) {
   margin-bottom: 0.5rem;
 }
 
-form input:last-child {
+form input[type="submit"] {
   color: #fff;
   background-color: #0862f6;
   margin-top: 1rem;
   cursor: pointer;
 }
-
-form input:is(:focus) {
-  background-color: #ccc;
+form input[type="submit"]:is(:hover, :focus) {
+  background-color: #3281ff;
+}
+form input[type="submit"]:active {
+  background-color: #2866c9;
 }
 
 form input:is(:focus, :hover) {
   outline: 2px solid #333;
+  background-color: #ccc;
+}
+
+.privacy {
+  position: relative;
+}
+
+.icon {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  color: #333;
+  cursor: pointer;
 }

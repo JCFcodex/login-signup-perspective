@@ -13,25 +13,34 @@
         <form>
           <input
             type="text"
-            placeholder="Username"
+            placeholder="Username or Phone number"
             autocomplete="off"
             spellcheck="false"
-            name="username"
+            name="username_phone_number"
             id="loginUsernameInputBox"
           />
-          <input
-            type="password"
-            placeholder="Password"
-            autocomplete="off"
-            spellcheck="false"
-            name="password"
-            id="loginPasswordInputBox"
-          />
-          <input
-            type="submit"
-            value="Log in"
-            id="loginBtn"
-          />
+          <div class="privacy" id="loginPassContainer">
+            <input
+              type="password"
+              placeholder="Password"
+              autocomplete="off"
+              spellcheck="false"
+              name="password"
+              id="loginPasswordInputBox"
+            />
+            <ion-icon
+              class="icon"
+              id="loginShowPass"
+              name="eye-outline"
+            ></ion-icon>
+            <ion-icon
+              class="icon"
+              id="loginHidePass"
+              name="eye-off-outline"
+            ></ion-icon>
+          </div>
+
+          <input type="submit" value="Log in" id="loginBtn" />
         </form>
         <div class="switch-acc">
           <p>
@@ -52,18 +61,34 @@
             id="signupUsernameInputBox"
           />
           <input
-            type="password"
-            placeholder="Password"
+            type="text"
+            placeholder="Phone number"
             autocomplete="off"
             spellcheck="false"
-            name="password"
-            id="signupPasswordInputBox"
+            name="phone_number"
+            id="signupPhoneInputBox"
           />
-          <input
-            type="submit"
-            value="Sign up"
-            id="signupBtn"
-          />
+          <div class="privacy" id="signupPassContainer">
+            <input
+              type="password"
+              placeholder="Password"
+              autocomplete="off"
+              spellcheck="false"
+              name="password"
+              id="signupPasswordInputBox"
+            /><ion-icon
+              class="icon"
+              id="signupShowPass"
+              name="eye-outline"
+            ></ion-icon>
+            <ion-icon
+              class="icon"
+              id="signupHidePass"
+              name="eye-off-outline"
+            ></ion-icon>
+          </div>
+
+          <input type="submit" value="Sign up" id="signupBtn" />
         </form>
         <div class="switch-acc">
           <p>
@@ -74,5 +99,13 @@
       </div>
     </div>
     <script src="./assets/js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
