@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  width: min(375px, 90%);
+  height: 500px;
+  perspective: 1000px;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #333;
+  border-radius: 10px;
+  opacity: 0;
+
+  transition: transform 0.25s ease-in, opacity 0ms ease-in 0.25s,
+    z-index 0.25s ease-in 0.25s;
+}
+
+.login {
+  transform: rotateY(90deg);
+  z-index: 0;
+}
+.signup {
+  transform: rotateY(-90deg);
+}
+
+.container.active {
+  transform: rotateY(0);
+  z-index: 2;
+  opacity: 1;
+  transition: transform 0.25s ease-out 0.25s, opacity 0ms ease-out 0.25s;
+}
+
+.heading {
+  color: #fff;
+}
+.switch-acc {
+  color: #fff;
+}
+.link {
+  color: #0862f6;
+  text-decoration: none;
+  font-weight: 700;
+}
+.link:is(:focus, :hover) {
+  text-decoration: underline;
+}
+
+form {
+  width: 100%;
+  padding: 2rem;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  outline: 1px solid #333;
+}
+
+form input:first-child {
+  margin-bottom: 0.5rem;
+}
+
+form input:last-child {
+  color: #fff;
+  background-color: #0862f6;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+form input:is(:focus) {
+  background-color: #ccc;
+}
+
+form input:is(:focus, :hover) {
+  outline: 2px solid #333;
+}

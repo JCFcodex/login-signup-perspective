@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perspective</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container login active" id="loginContainer">
+        <div class="heading"><h1>LOG IN</h1></div>
+        <form>
+          <input
+            type="text"
+            placeholder="Username"
+            autocomplete="off"
+            spellcheck="false"
+            name="username"
+            id="loginUsernameInputBox"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            autocomplete="off"
+            spellcheck="false"
+            name="password"
+            id="loginPasswordInputBox"
+          />
+          <input
+            type="submit"
+            value="Log in"
+            id="loginBtn"
+          />
+        </form>
+        <div class="switch-acc">
+          <p>
+            Don't have an account?
+            <a href="#" class="link" id="signupLink">Sign up</a>
+          </p>
+        </div>
+      </div>
+      <div class="container signup" id="signupContainer">
+        <div class="heading"><h1>SIGN UP</h1></div>
+        <form>
+          <input
+            type="text"
+            placeholder="Username"
+            autocomplete="off"
+            spellcheck="false"
+            name="username"
+            id="signupUsernameInputBox"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            autocomplete="off"
+            spellcheck="false"
+            name="password"
+            id="signupPasswordInputBox"
+          />
+          <input
+            type="submit"
+            value="Sign up"
+            id="signupBtn"
+          />
+        </form>
+        <div class="switch-acc">
+          <p>
+            Already have an account?
+            <a href="#" class="link" id="loginLink">Log in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
