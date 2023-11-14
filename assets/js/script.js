@@ -25,16 +25,17 @@ const suPassInputBx = document.getElementById("signupPasswordInputBox");
 const suPhoneInputBx = document.getElementById("signupPhoneInputBox");
 const suSubmitBtn = document.getElementById("signupBtn");
 
-suSubmitBtn.addEventListener("click", () => {
-  submitForm(suUserInputBx, suPassInputBx);
-});
-
 lgSubmitBtn.addEventListener("click", () => {
   event.preventDefault();
   submitForm(lgUserInputBx, lgPassInputBx);
 });
 
-submitForm = (username, password) => {
+suSubmitBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  submitForm(suUserInputBx, suPhoneInputBx, suPassInputBx);
+});
+
+submitForm = (username, phone, password, event) => {
   if (username.value === "") {
     alert("Please enter your username.");
     username.focus();
