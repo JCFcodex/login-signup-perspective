@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,6 +91,10 @@ form input {
 form input:first-child,
 form input:nth-child(2) {
   margin-bottom: 0.5rem;
+}
+
+form .privacy input {
+  padding-right: 3rem;
 }
 
 form input[type="submit"] {
